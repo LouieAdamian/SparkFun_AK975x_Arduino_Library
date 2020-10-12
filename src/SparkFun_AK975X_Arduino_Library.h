@@ -24,7 +24,9 @@
 
 #pragma once
 
-#if (ARDUINO >= 100)
+#ifdef __XTENSA__
+#include "Arduino.h"
+#elif (ARDUINO >= 100)
 #include "Arduino.h"
 #else
 #include "WProgram.h"
